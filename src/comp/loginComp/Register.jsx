@@ -27,7 +27,6 @@ function Register() {
     })
     axios.put('http://localhost:5000/0', Register).then(() => {
       toast.success("registered")
-      navigate("/SignUp")
       console.log("done");
 
     }).catch(() => {
@@ -42,12 +41,9 @@ function Register() {
     
 
       <div className={style.all}>
-      <img className={style.backGround} src={backGround} alt="" />
 
-        <section className={style.formR}>
-        <h1>Register</h1>
-
-          <form onSubmit={onsubmit} >
+          <form onSubmit={onsubmit} className={style.formR}>
+            <h1>Register</h1>
             <div className={style.data}> 
               <label htmlFor="name">name</label>
               <input id='name' type="name" name='name' value={Register.name} onChange={handleChange} /></div>
@@ -64,11 +60,8 @@ function Register() {
             </div>
             <button type='submit' className={style.btn}>Register</button>
             <button type="button" className={style.btn}>
-              <Link to={'/SignUp'}>SignUp</Link></button>
-          </form>
-
-        </section>
-        
+              <Link to={'/main/SignUp'}>SignUp</Link></button>
+          </form>         
       </div>
 
 

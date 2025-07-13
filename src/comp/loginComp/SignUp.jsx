@@ -22,7 +22,7 @@ function SignUp() {
     if (api.email === data.email &&
       api.password === data.password) {
       toast.success(`"welcome back " ${data.name}`)
-      navigator("/main")
+      navigator("/main/Home")
 
     }
     else { toast.error("you are not register") }
@@ -42,10 +42,10 @@ function SignUp() {
 
   return (
     <div  className={style.all}>
-      <img className={style.backGround} src={backGround} alt="" />
-       <section className={style.formR}>
-       <h1>SignUp</h1>
-      <form onSubmit={onsubmit} >
+
+
+      <form onSubmit={onsubmit} className={style.formR} >
+        <h1>SignUp</h1>
         <div className={style.data}>
         <label htmlFor="email">email</label>
         <input id='email' type="email" name='email' onChange={handleChange} value={data.email} />
@@ -55,9 +55,9 @@ function SignUp() {
         <input id='password' type="password" name='password' onChange={handleChange} value={data.password} />
         </div>
         <button className={style.btn} type='submit'>LogIn</button>
-        <button className={style.btn} ><Link to={"/Register"}>Register</Link></button>
+        <button className={style.btn} ><Link to={"/main"}>Register</Link></button>
       </form>
-      </section>
+
     </div>
   )
 }

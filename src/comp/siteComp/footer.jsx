@@ -6,29 +6,27 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <p className="footer-brand-name">FoodSite</p>
+          <p className="footer-brand-name">Menuuu<br />
+            spaCulinary Artistry</p>
         </div>
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
             <li><>Home</></li>
-            <li><>Menu</></li>
             <li><>About Us</></li>
-            <li><>Contact</></li>
-            <li><>Privacy Policy</></li>
           </ul>
         </div>
         <div className="footer-social">
-          <h3>Follow Us</h3>
+          <h3>Contact Us</h3>
           <div className="social-icons">
-            Instagram <br />
-            Facebook <br />
-            Twitter
+            harseepsinghsardar@Gmail.com <br />
+            phone_no= 9253443662 <br />
           </div>
         </div>
       </div >
       <div className="footer-bottom">
-        <p>&copy; 2024 FoodSite. All rights reserved.</p>
+        <p>&copy; 2025 Menuuu
+          spaCulinary Artistry. All rights reserved.</p>
       </div>
     </footer >
   );

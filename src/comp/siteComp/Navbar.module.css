@@ -1,0 +1,49 @@
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(254, 244, 230);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 20px;
+  margin: 0;
+  border: 1px solid rgb(230, 219, 219);
+  width: 100%;
+}
+.logo{
+  font-size: 40px;
+  position: relative;
+  top: 9px;
+  color: rgb(248, 79, 17) ;
+}
+.head{
+    font-family: cursive;
+  font-style: normal;
+}
+.menu_list{
+  display: flex;
+  list-style: none;
+  gap: 38px;
+  justify-content: center;
+  align-items: center; 
+  font-family:  'Arial Narrow Bold', sans-serif;
+}
+.menu_list>a{
+  color:black ;
+}
+.btn{
+  padding: 14px;
+  font-size: 20px;
+  border-radius:12px ;
+  background-color: rgb(248, 79, 17);
+  color: white;
+  
+}
+.btnLogo{
+  font-size:22px ;
+  padding-right: 5px;
+
+}
