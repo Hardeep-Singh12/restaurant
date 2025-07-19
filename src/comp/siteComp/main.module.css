@@ -1,0 +1,14 @@
+
+footer{
+  display: block;
+  position: relative;
+  justify-content: right;
+}
+.all{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Feed{
+width: 100%;
+}

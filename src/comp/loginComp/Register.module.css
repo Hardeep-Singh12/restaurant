@@ -1,0 +1,45 @@
+* {
+  font-family: cursive;
+}
+
+.all {
+  width: 100%;
+  color: #f1c40f;;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    min-height: 660px;
+    background-color: rgb(249, 248, 247);
+
+}
+
+.formR>h1{
+  font-size: 60px;
+  margin: 20px;
+color: #f1c40f; 
+}
+.data{
+  font-size: 25px;
+  position: relative;
+  font-weight: 600;
+  display: flex;
+  justify-content:space-between;
+  text-transform: capitalize;
+  margin: 22px 30px;
+}
+.data>input{
+  border-radius: 12px;
+    margin: 0px 30px;
+}
+.btn{
+  font-size: 22px;
+    padding: 8px 20px;
+  margin: 10px;
+  color: #f1c40f;
+  background-color: #333;
+  border-radius: 20px;
+    text-decoration: none;
+}
+.btn a {
+  color: #f1c40f; 
+}

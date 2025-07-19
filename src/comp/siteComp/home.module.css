@@ -1,0 +1,53 @@
+.greting{
+   background-image:     linear-gradient(rgba(49, 42, 37, 0.5), rgba(65, 3, 3, 0.5)), 
+ url("./img/food5.jpg");
+  height: 800px;
+  background-position:center ;
+  background-size: cover;
+  color: rgb(249, 248, 248);
+  align-content: center;
+  justify-items: center;
+}
+.gretingHeading{
+
+  font-size: 4rem;
+  padding: 10px;
+}
+.gretingMess{
+  font-size: 30px;
+  padding-bottom:20px;
+  font-family: cursive;
+}
+.gretingBtn{
+  padding: 10px 20px;
+  font-size: 23px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  background-color:transparent;
+  -webkit-backdrop-filter: blur(2px);
+backdrop-filter: blur(1px);   
+  color: white;
+  margin: 5px 20px;
+  font-weight: 200;
+
+}
+.chefSection{
+    height: 800px;
+  background-position:center ;
+  background-size: cover;
+  /* color: rgb(249, 248, 248); */
+  align-content: center;
+  justify-items: center;
+}
+.chefSecHeading{
+    font-size: 3rem;
+  position: relative;
+  /* top:-20px; */
+  padding: 10px;
+}
+.chefSecSubHead{
+
+  font-size: 20px;
+  padding-bottom:20px;
+  font-family: cursive;
+}

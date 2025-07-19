@@ -1,0 +1,41 @@
+.all{
+  justify-content: center;
+  padding: 20px;
+  height: 640px;
+  display: flex;
+  align-items: center;
+}
+.all>h1{
+  font-size: 59px;
+  text-decoration-color:red ;
+  color: #f1c40f;
+}
+.formR>h1{
+  font-size: 60px;
+  color: #f1c40f;
+}
+.data{
+  color: #f1c40f;
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content:space-between;
+  text-transform: capitalize;
+  margin: 22px ;
+}
+.data>input{
+  border-radius: 6px;
+  margin: 0px 33px;
+  border: 2px solid;
+}
+.btn{
+  background-color: #333;
+  font-size: 22px;
+   padding: 8px 20px;
+  margin: 10px;
+  border-radius: 20px;
+      color: #f1c40f; 
+}
+.btn a {
+  color: #f1c40f; 
+}
