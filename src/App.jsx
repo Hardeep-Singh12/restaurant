@@ -5,7 +5,7 @@ import './App.css';
 
 import Register from './comp/loginComp/Register';
 import SignUp from './comp/loginComp/SignUp';
-import Main from './comp/siteComp/Main';
+import Main from './comp/siteComp/main';
 import Feed from './comp/siteComp/Feed';
 import About_us from './comp/siteComp/About_us';
 import Home from './comp/siteComp/Home';
