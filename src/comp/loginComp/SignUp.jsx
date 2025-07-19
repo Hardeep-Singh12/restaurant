@@ -19,15 +19,8 @@ function SignUp() {
     console.log(data);
     setData({ email: "", password: "" })
     console.log(api);
-    if (api.email === data.email &&
-      api.password === data.password) {
       toast.success(`"welcome back " ${data.name}`)
       navigator("/home")
-
-    }
-    else { toast.error("you are not register") }
-
-
   }
   useEffect(() => {
     async function fetchDAta() {
