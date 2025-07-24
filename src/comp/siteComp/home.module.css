@@ -16,7 +16,7 @@
 .gretingMess{
   font-size: 30px;
   padding-bottom:20px;
-  font-family: cursive;
+  font-family: Poppins;
 }
 .gretingBtn{
   padding: 10px 20px;
@@ -48,7 +48,7 @@ backdrop-filter: blur(1px);
 
   font-size: 20px;
   padding-bottom:20px;
-  font-family: cursive;
+  font-family: Poppins;
 }
 @media (max-width: 768px) {
   .greting {
