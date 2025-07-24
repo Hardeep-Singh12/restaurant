@@ -89,8 +89,9 @@
 
 @media (max-width: 600px) {
   .event-card {
-    font-size: 16px;
-    padding: 15px;
+    font-size: 15px;
+    padding: 3px;
+    /* margin: 2px; */
   }
 
   .sesional-title {
