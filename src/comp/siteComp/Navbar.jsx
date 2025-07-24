@@ -3,7 +3,7 @@ import { CiCalendarDate } from "react-icons/ci";
 import { PiChefHatDuotone, PiDiscordLogoBold } from "react-icons/pi";
 import { IoIosBook } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
-import style from "./Navbar.module.css"; // Replace with actual CSS file name
+import style from "./Navbar.module.css"; 
 
 function Navbar() {
   const navigate = useNavigate();

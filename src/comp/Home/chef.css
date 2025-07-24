@@ -1,0 +1,144 @@
+.chef-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chef-details {
+  font-family: cursive;
+  width: 500px;
+  height: auto;
+}
+
+.chef-name {
+  font-family: initial;
+  font-size: 34px;
+}
+
+.chef-title {
+  font-size: 18px;
+  color: rgb(143, 136, 136);
+}
+
+.chef-exp {
+  color: rgb(196, 156, 24);
+  font-size: 20px;
+}
+
+.inspiration-title {
+  font-family: sans-serif;
+  padding: 20px 0 10px;
+  font-size: 26px;
+}
+
+.inspiration-sub,
+.inspiration-desc {
+  font-size: 18px;
+}
+
+.technique-card {
+  background-color: white;
+  font-family: sans-serif;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.technique-head {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.technique-sub {
+  margin-bottom: 10px;
+  color: rgb(143, 136, 136);
+}
+
+.technique-desc {
+  font-size: 17px;
+}
+
+.ingredients-section {
+  width: 400px;
+  padding: 10px;
+}
+
+.ingredient-card {
+  display: flex;
+  border: 2px solid black;
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.ingredient-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ingredient-text {
+  flex: 1;
+}
+
+.ingredient-source {
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+}
+
+.ingredient-desc {
+  font-size: 14px;
+  color: #666;
+}
+
+.view-menu {
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid black;
+  background-color: rgb(44, 26, 16);
+  color: white;
+}
+
+.view-menu h4 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.menu-link {
+  font-size: 18px;
+  padding: 10px 15px;
+  margin-top: 12px;
+  display: inline-block;
+  background-color: rgb(249, 100, 46);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .chef-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chef-details,
+  .ingredients-section {
+    width: 90%;
+  }
+
+  .ingredient-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ingredient-img {
+    margin-bottom: 10px;
+  }
+}

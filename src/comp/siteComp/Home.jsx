@@ -57,7 +57,6 @@ Each dish tells the story of winter's bounty, transformed through classical Fren
             reserve your table
           </button>
         </div>      </div>
-      {/* /////////////////////////////////////////////////////////////////////////// */}
       <Sesional />
 
       <div className={style.chefSection}>

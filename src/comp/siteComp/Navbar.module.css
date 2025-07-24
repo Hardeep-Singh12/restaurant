@@ -1,4 +1,4 @@
-
+/* ================== Base Navbar Styles ================== */
 .nav {
   position: sticky;
   top: 0;
@@ -13,37 +13,76 @@
   border: 1px solid rgb(230, 219, 219);
   width: 100%;
 }
-.logo{
+
+.logo {
   font-size: 40px;
   position: relative;
   top: 9px;
-  color: rgb(248, 79, 17) ;
+  color: rgb(248, 79, 17);
 }
-.head{
-    font-family: cursive;
+
+.head {
+  font-family: cursive;
   font-style: normal;
 }
-.menu_list{
+
+.menu_list {
   display: flex;
   list-style: none;
   gap: 38px;
   justify-content: center;
-  align-items: center; 
-  font-family:  'Arial Narrow Bold', sans-serif;
+  align-items: center;
+  font-family: 'Arial Narrow Bold', sans-serif;
 }
-.menu_list>a{
-  color:black ;
+
+.menu_list > a {
+  color: black;
+  text-decoration: none;
 }
-.btn{
+
+.btn {
   padding: 14px;
   font-size: 20px;
-  border-radius:12px ;
+  border-radius: 12px;
   background-color: rgb(248, 79, 17);
   color: white;
-  
+  cursor: pointer;
 }
-.btnLogo{
-  font-size:22px ;
-  padding-right: 5px;
 
+.btnLogo {
+  font-size: 22px;
+  padding-right: 5px;
+}
+
+/* ================== Media Queries ================== */
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    padding: 10px;
+    
+  }
+  .head{
+    font-size: 12px;
+  }
+
+  .menu_list {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .menu_list > a {
+    font-size: 12px;
+    padding-left: 10px;
+  }
+
+  .btn {
+  
+    display: none;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
 }
