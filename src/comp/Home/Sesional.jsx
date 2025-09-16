@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 
 function Sesional() {
 
@@ -28,7 +28,7 @@ function Sesional() {
     1: [ // February
       {
         date: '14',
-        title: "Valentine\'s Romance Menu",
+        title: "Valentine's Romance Menu",
         type: 'special-menu',
         description: 'Intimate dining experience with aphrodisiac ingredients',
         price: '$150 per couple'
@@ -76,7 +76,7 @@ function Sesional() {
     4: [ // May
       {
         date: '12',
-        title: "Mother\'s Day Garden Menu",
+        title: "Mother's Day Garden Menu",
         type: 'special-menu',
         description: 'Fresh herbs and edible flowers celebration',
         price: '$90 per person'
@@ -161,16 +161,14 @@ function Sesional() {
   }
 
 
-
-
-
-
   return (
     <div style={{ alignItems: "center", justifyItems: "center" }}>
 
 
       <h1 style={{ fontSize: "49px", margin: "10px" }} >Seasonal Calendar</h1>
       <p style={{ fontSize: "24px", marginBottom: "40px", color: "rgb(97, 89, 86)" }}   >Discover our special menus and culinary events throughout the year</p>
+
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
       {months.map((month, index) => (
 
         <button key={month} onClick={() => handleClick(index)}
@@ -183,6 +181,8 @@ function Sesional() {
           {month}
         </button>
       ))}
+           </div>
+   
 
       <h1 style={{ color: 'rgb(248, 79, 17)' }}>{months[selectedMonth]}  Events</h1>
       <p>Special dining experiences and culinary celebrations</p>
@@ -192,9 +192,13 @@ function Sesional() {
           <div key={index} style={{ alignContent: "center", margin: "20px", fontSize: "20px", border: "solid black 2px", padding: "20px", minWidth: "500px" }}>
             <span key={index}><span>{event.date.for}</span> <h3>{event.title}</h3><p>{event.description}</p> <h6>{event.price}</h6>  <button style={{ padding: "6px 10px", margin: "15px 10px", fontSize: "20px", backgroundColor: 'rgb(248, 79, 17)', color: "white" }} onClick={() => alert(`your tabel for the specfic ${event.title} event has been booked we will send you an recipt on your email`)}>Reserve</button></span></div>
         ))}
+   
+
+      <div style={{display: "flex", flexWrap: "wrap" ,flexDirection: "column", justifyContent: "center"}}>
       <p>Want to be notified about upcoming events and special menus?</p>
       <button style={{ padding: "6px 10px", margin: "15px 10px", fontSize: "20px", backgroundColor: 'rgb(248, 79, 17)', color: "white" }}>Subscribe to Updates  </button>
     </div>
+</div>
   )
 }
 

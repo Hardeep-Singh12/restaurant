@@ -1,14 +1,20 @@
 .greting{
    background-image:     linear-gradient(rgba(49, 42, 37, 0.5), rgba(65, 3, 3, 0.5)), 
  url("./img/food5.jpg");
-  height: 800px;
   background-position:center ;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 100%;
+  justify-content: center; 
+  align-items: center;   
+
   color: rgb(249, 248, 248);
-  align-content: center;
-  justify-items: center;
+
 }
 .gretingHeading{
+  width: auto;
   font-size: 4rem;
   position: relative;
   /* top:-20px; */
@@ -36,7 +42,6 @@ backdrop-filter: blur(1px);
     height: 800px;
   background-position:center ;
   background-size: cover;
-  /* color: rgb(249, 248, 248); */
   align-content: center;
   justify-items: center;
 }

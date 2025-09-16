@@ -17,12 +17,12 @@ const routes = createBrowserRouter([
 
 
   {
-    path: "/main",
+    path: "/",
     element: <Main />,
     children: [
       {
         index: true,
-        element: <Register />,
+        element: <Home />,
       }, {
         path: "SignUp",
         element: <SignUp />,
@@ -37,6 +37,10 @@ const routes = createBrowserRouter([
         path: "Home",
         element: <Home />,
       },
+      {
+        path: "register",   // `/register`
+        element: <Register />,
+      }
     ],
   },
   // {

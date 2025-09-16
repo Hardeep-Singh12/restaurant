@@ -13,8 +13,8 @@ function BehindTheSeen() {
     task2: "7:00 AM - Ingredient delivery and quality check",
     task3: "9:00 AM - Sauce preparation and stock making",
     task4: "11:00 AM - Protein preparation and seasoning",
-    task4: "2:00 PM - Final prep and mise en place",
-    task5: "5:00 PM - Service begins with precision timing",
+    task5: "2:00 PM - Final prep and mise en place",
+    task6: "5:00 PM - Service begins with precision timing",
   }
   let DailyProp = {
     heading: "The Art of Preparation",
@@ -24,8 +24,8 @@ function BehindTheSeen() {
     task2: "Traditional knife techniques for perfect cuts",
     task3: "Seasonal menu adjustments based on availability",
     task4: "Fresh pasta made daily from scratch",
-    task4: "House-made stocks simmered for 12+ hours",
-    task5: "Artisanal bread baked throughout the day",
+    task5: "House-made stocks simmered for 12+ hours",
+    task6: "Artisanal bread baked throughout the day",
   }
   let service = {
     heading: "The Dance of Service",
@@ -35,8 +35,8 @@ function BehindTheSeen() {
     task2: "Quality check for every single plate",
     task3: "Seamless communication between front and back",
     task4: "Adaptability to special dietary requests",
-    task4: "Maintaining consistency throughout service",
-    task5: "Post-service review and improvement planning"
+    task5: "Maintaining consistency throughout service",
+    task6: "Post-service review and improvement planning"
   }
 
 
