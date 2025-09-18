@@ -1,12 +1,14 @@
 .recipeList {
+  background-color: rgb(222, 222, 221);
   text-align: center;
   padding: 20px;
   font-family: Arial, sans-serif;
   margin: 20px;
 }
 
-.recipe-list h1 {
-  font-size: 8px;
+.recipeList h1 {
+  font-size:  42px;
+  color:rgb(248, 79, 17);;
   margin-bottom: 20px;
 }
 
@@ -19,7 +21,7 @@
 }
 
 .recipeItem {
-  background-color: #fff;
+  background-color: #dadada;
   font-size: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -35,7 +37,7 @@
 }
 
 .recipeItem h3 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-top: 15px;
 }
 
@@ -44,8 +46,41 @@
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-  .recipes {
-    grid-template-columns: 1fr;
+@media (max-width: 770px) {
+ .recipeItem h3 {
+    font-size: 24px;
+  } 
+  .recipeItem p {
+    font-size: 16px;
+  }
+  .recipeImage {
+    height: 200px;
+    object-fit: fill;
+  }
+}
+@media (max-width: 480px) {
+  .recipeList{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    margin-bottom:  12px ;
+
+
+  }
+  .recipe-list{
+
+    padding: 10px;
+  }
+
+  .recipeItem h3 {
+    font-size: 20px;
+  } 
+  .recipeItem p {
+    font-size: 14px;
+  }
+  .recipeImage {
+    height: 150px;
+    object-fit: fill;
   }
 }

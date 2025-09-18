@@ -39,7 +39,9 @@ backdrop-filter: blur(1px);
 
 }
 .chefSection{
-    height: 800px;
+    background-color: rgb(222, 222, 221);
+    height: auto;
+      padding: 20px 40px;
   background-position:center ;
   background-size: cover;
   align-content: center;
@@ -56,4 +58,73 @@ backdrop-filter: blur(1px);
   font-size: 20px;
   padding-bottom:20px;
   font-family: cursive;
+}
+@media (max-width: 768px) {
+  .greting {
+    padding: 20px;
+    height: 600px;
+    width: auto;
+
+  }
+
+  .gretingHeading {
+    font-size: 2.5rem;
+  }
+
+  .gretingMess {
+    font-size: 18px;
+  }
+
+  .gretingBtn {
+    padding: 8px 15px;
+    font-size: 18px;
+    margin: 5px 10px;
+  }
+
+  .chefSection {
+    padding: 12px;
+    height: auto;
+    width: auto;
+  }
+
+  .chefSecHeading {
+    font-size: 1.4rem;
+    position: relative;
+    /* top:-20px; */
+    padding: 10px;
+  }
+
+  .chefSecSubHead {
+    font-size: 12px;
+
+}
+}
+
+@media (max-width: 429px) {
+
+  .greting {
+    height: 400px;
+    align-items: start;
+  }
+
+  .gretingHeading {
+    font-size: 1.8rem;
+    margin-top: 80px;
+    padding: 5px;
+  }
+
+  .gretingMess {
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    margin-left: 5px;
+  }
+
+
+  .gretingBtn {
+    padding: 6px 12px;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-top: 12px;
+  }
 }

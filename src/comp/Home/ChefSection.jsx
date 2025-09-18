@@ -1,61 +1,98 @@
-import React from 'react'
-import Card from '@mui/material/Card';
+import styles from './ChefSection.module.css'
+import veg4 from '../siteComp/img/veg4.webp'
+import veg5 from '../siteComp/img/veg5.avif'
+import veg3 from '../siteComp/img/veg3.jpg'
 import { Link } from 'react-router-dom';
 
 
 
-function ChefSection({ chef, currentInspiration }) {
+function ChefSection() {
+  const currentInspiration = {
+    title: "Winter's Embrace",
+    subtitle: "Seasonal Focus: Root Vegetables & Warming Spices",
+    description: `This season, I'm deeply inspired by the earthy richness of winter root vegetables and the warming embrace of traditional spices. Our menu celebrates the natural sweetness of roasted parsnips, the robust flavor of heritage carrots, and the comforting warmth of cardamom and cinnamon.
+
+
+    Each dish tells the story of winter's bounty, transformed through classical French techniques with a modern sensibility. We're sourcing directly from local farms that practice sustainable agriculture, ensuring every ingredient carries the authentic taste of the season.`,
+    chef: {
+      name: "Chef Marcus Beaumont",
+      title: "Executive Chef & Culinary Director",
+      image: "https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      experience: "15+ years"
+    },
+    featuredIngredients: [
+      {
+        name: "Heritage Carrots",
+        source: "Meadowbrook Farm",
+        description: "Purple, yellow, and orange varieties with intense flavor",
+        image: veg4
+      },
+      {
+        name: "Cardamom",
+        source: "Spice Route Imports",
+        description: "Green cardamom pods from sustainable Kerala farms",
+        image: veg3
+      },
+      {
+        name: "Winter Parsnips",
+        source: "Valley View Organics",
+        description: "Sweet, earthy parsnips perfect for roasting and purees",
+        image: veg5
+      }
+    ],
+    preparationInsight: {
+      technique: "Slow Roasting & Spice Infusion",
+      description: "We roast our root vegetables at precisely 375°F for 45 minutes, allowing their natural sugars to caramelize while maintaining their texture. The spices are toasted whole before grinding to release their essential oils.",
+    }
+  };
   return (
-    <div style={{ display: "flex" ,width:"100%",justifyContent:"center" }}>
-      <div style={{ alignItems: "center", justifyContent: "cente", height: "500px", width: "500px", fontFamily: 'cursive' }}>
-        <span style={{ fontFamily: "initial", fontSize: "34px" }}>
-          {chef.name}
-          <p style={{ fontSize: "18px", color: " rgb(143, 136, 136)" }}>{chef.title} <br /></p> <p style={{ color: "rgb(196, 156, 24)", fontSize: "20px" }}>{chef.experience}</p>
+    <div className={styles.container}>
+      <div className={styles.chefInfo}>
+        <span className={styles.chefName}>
+          {currentInspiration.chef.name}
+          <p className={styles.chefTitle}>{currentInspiration.chef.title}</p>
+          <p className={styles.chefExperience}>{currentInspiration.chef.experience}</p>
         </span>
 
+        <h3 className={styles.currentInspirationTitle}>{currentInspiration.title}</h3>
+        <p>{currentInspiration.subtitle}</p>
+        <p className={styles.currentInspirationDesc}>{currentInspiration.description}</p>
 
-        <h3 style={{ fontFamily: "sans-serif", paddingBottom: "10px", paddingTop: "20px", fontSize: "26px", }}>{currentInspiration.title}</h3><p>
-          {currentInspiration.subtitle}</p>
-        <p style={{fontSize:"18px"}}>{currentInspiration.description} </p>
-
-        <Card style={{ backgroundColor: "white", fontFamily: "sans-serif", marginTop: "20px", padding: "20px" }}>
-          <p className="datahead" style={{ fontSize: "20px", fontWeight: "bold" }}>Technique Spotlight</p> <p className="subhad" style={{ marginBottom: "10px", color: "rgb(143, 136, 136) " }}>Slow Roasting & Spice Infusion</p> <p className='data' style={{ fontSize: "17px" }}>We roast our root vegetables at precisely 375°F for 45 minutes, allowing their natural sugars to caramelize while maintaining their texture. The spices are toasted whole before grinding to release their essential oils.</p>
-        </Card>
-      </div>
-
-      <div  className='Ingredients' style={{margin:"12px"}}> <h2>Featured Seasonal Ingredients</h2>
-       {currentInspiration.featuredIngredients.map((ingredient, index) => (
-        <div key={index} style={{display:"flex", border:"2px solid black", margin:"5px",fontSize:"20px"}} >
-          <div>
-              <img style={{ width: "100px", height: "100px", margin: "8px", borderRadius: "80px"}}
-                src={ingredient.image}
-                alt={ingredient.name}
-                className="w-full h-full object-cover"
-              />
-      </div>
-      <div>
-              {/* <h6 className="font-semibold text-primary mb-1">
-                {ingredient.name}
-              </h6> */}
-              <p className="text-sm text-accent font-medium mb-2">
-                Source: {ingredient.source}
-              </p>
-              <p className="text-sm text-text-secondary">
-                {ingredient.description}
-              </p>
+        <div className={styles.techniqueSpotlight}>
+          <p className="datahead">Technique Spotlight</p>
+          <p className="subhad">Slow Roasting & Spice Infusion</p>
+          <p className='data'>
+            We roast our root vegetables at precisely 375°F for 45 minutes, allowing their natural sugars
+            to caramelize while maintaining their texture. The spices are toasted whole before grinding
+            to release their essential oils.
+          </p>
         </div>
+      </div>
+
+      <div className={styles.ingredientsSection}>
+        <h2>Featured Seasonal Ingredients</h2>
+        {currentInspiration.featuredIngredients.map((ingredient, index) => (
+          <div key={index} className={styles.ingredientCard}>
+            <img
+              className={styles.ingredientImage}
+              src={ingredient.image}
+              alt={ingredient.name}
+            />
+            <div>
+              <p>Source: {ingredient.source}</p>
+              <p>{ingredient.description}</p>
+            </div>
+          </div>
+        ))}
+
+        <div className={styles.viewMenu}>
+          <h4>Experience the Season</h4>
+          <p>Taste these inspired creations in our current winter menu</p>
+          <Link to="/main/Feed" className={styles.viewMenuLink}>View Winter Menu</Link>
         </div>
-      ))}
-       <div className='viewmenu' style={{fontSize:"24px" ,padding:"20px",textAlign:"center", border:"2px solid black",backgroundColor:"rgb(44, 26, 16)", color:"white"}}><h4 style={{fontSize:"22px",margin:"2px"}}>Experience the Season </h4><p style={{margin:"20px"}}>Taste these inspired creations in our current winter menu<br/></p>
-        <Link to="/main/Feed" style={{fontSize:"18px",padding:"10px",marginTop:"12px" ,backgroundColor:"rgb(249, 100, 46)",color:"white"}}>view Wintr menu</Link>
       </div>
-      </div>
-
-
-
     </div>
-
-  )
+  );
 }
 
 export default ChefSection

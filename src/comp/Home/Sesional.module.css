@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  font-size: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+    background-color: rgb(222, 222, 221);
+
+}
+
+.heading {
+  font-size: 49px;
+  margin: 10px;
+}
+
+.subheading {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: rgb(97, 89, 86);
+  text-align: center;
+}
+
+.monthsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.monthsContainer>button{
+  padding: 10px 15px;
+  margin: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.eventCard {
+  align-content: center;
+  margin: 20px;
+  font-size: 20px;
+  border: 2px solid black;
+  padding: 20px;
+  min-width: 500px;
+}
+
+.reserveButton {
+  padding: 6px 10px;
+  margin: 15px 10px;
+  font-size: 20px;
+  background-color: rgb(248, 79, 17);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.subscribeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.subscribeButton {
+  padding: 6px 10px;
+  margin: 15px 10px;
+  font-size: 20px;
+  background-color: rgb(248, 79, 17);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .eventCard {
+    min-width: 300px;
+    font-size: 16px;
+  }
+  .heading {
+    font-size: 32px;
+  }
+  .subheading {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .reserveButton {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+  .subscribeButton {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+  .monthsContainer>button{
+    font-size: 16px;
+    padding: 8px 10px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .eventCard {
+    min-width: 250px;
+    font-size: 14px;
+    padding: 15px;
+    margin: 10px;
+  }
+  .heading {
+    font-size: 24px;
+  }
+  .subheading {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .reserveButton {
+    font-size: 14px;
+    padding: 4px 6px;
+    margin: 10px 5px;
+  }
+  .subscribeButton {
+    font-size: 14px;
+    padding: 4px 6px;
+    margin: 10px 5px;
+  }
+  .monthsContainer>button{
+    font-size: 14px;
+    padding: 6px 8px;
+    margin: 6px;
+  }
+}

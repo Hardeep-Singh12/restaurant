@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import styles from "./ChefSection.module.css"
+import { useState } from 'react'
 import food2 from "../siteComp/img/food2.jpg"
 import food1 from "../siteComp/img/food1.jpg"
 import restrunt from '../siteComp/img/restrunt.jpg';
-import "./aboutUS.css"
 import { CiPaperplane } from "react-icons/ci";
 import { CiLollipop } from "react-icons/ci"; import { CiStar } from "react-icons/ci";
 
@@ -37,20 +37,17 @@ function ChefSection() {
   let [info, setInfo] = useState(info2018)
   const [selectedYear, setSelectedYear] = useState('2015');
 
-
-
-
   return (
     <>
-      <div className='container'>
-        <h1 className='mainHeading'>The Cheaf's Joureny</h1>
-        <p className='subHead'> From classical training to innovative cuisine, discover the path that led to Menuuu's unique culinary philosophy.</p>
+      <div className={styles.container}>
+        <h1 className={styles.mainHeading}>The Chef's Journey</h1>
+        <p className={styles.subHead}>
+          From classical training to innovative cuisine, discover the path that led to Menuuu's unique culinary philosophy.
+        </p>
+        <div className="styles.btnDiv">
         <button
-          className='btnAll'
-          onClick={() => {
-            setInfo(info2018);
-            setSelectedYear('2015');
-          }}
+            className={styles.btnAll}
+            onClick={() => { setInfo(info2018); setSelectedYear('2015'); }}
           style={{
             backgroundColor: selectedYear === '2015' ? 'rgb(248, 79, 17)' : 'white',
             color: selectedYear === '2015' ? 'white' : 'black'
@@ -60,11 +57,8 @@ function ChefSection() {
         </button>
 
         <button
-          className='btnAll'
-          onClick={() => {
-            setInfo(info2020);
-            setSelectedYear('2020');
-          }}
+            className={styles.btnAll}
+            onClick={() => { setInfo(info2020); setSelectedYear('2020'); }}
           style={{
             backgroundColor: selectedYear === '2020' ? 'rgb(248, 79, 17)' : 'white',
             color: selectedYear === '2020' ? 'white' : 'black'
@@ -74,11 +68,8 @@ function ChefSection() {
         </button>
 
         <button
-          className='btnAll'
-          onClick={() => {
-            setInfo(info2025);
-            setSelectedYear('2025');
-          }}
+            className={styles.btnAll}
+            onClick={() => { setInfo(info2025); setSelectedYear('2025'); }}
           style={{
             backgroundColor: selectedYear === '2025' ? 'rgb(248, 79, 17)' : 'white',
             color: selectedYear === '2025' ? 'white' : 'black'
@@ -86,21 +77,32 @@ function ChefSection() {
         >
           2025
         </button>
-
-        <div style={{ display: "flex", justifyContent: "space-evenly", margin: "80px 5px", padding: "20px", borderRadius: "8px", fontSize: "23px" }}>
-          <span className='infoContainer' style={{ marginRight: "20px", padding: "20px" }}>
-            <h2 ><CiStar style={{ position: "relative", top: "2px", color: "rgb(248, 79, 17) " }} />{info.heading}</h2>
-            <h4 style={{ paddingBottom: "20px" }}><CiLollipop />{info.locition}</h4>
+        </div>
+        <div className={styles.evolution}>
+          <span className={styles.infoContainer} style={{ marginRight: "20px", padding: "20px" }}>
+            <h2><CiStar style={{ position: "relative", top: "2px", color: "rgb(248, 79, 17)" }} /> {info.heading}</h2>
+            <h4 style={{ paddingBottom: "20px" }}><CiLollipop /> {info.locition}</h4>
             <p>{info.info}</p>
             <ul style={{ listStyle: "none", marginTop: "60px" }}>
-              <li><CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} />{info.achivment1}</li>
-              <li><CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} />{info.achivment2}</li>
+              <li><CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} /> {info.achivment1}</li>
+              <li><CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} /> {info.achivment2}</li>
             </ul>
           </span>
-          <span >  <img src={info.img} alt="don't" style={{ width: "400px", height: "380px", margin: "10px", borderRadius: "80px", boxShadow: "2px  2px 20px 20px rgb(176, 175, 174) " }} /> </span>
+
+          <span>
+            <img
+            className={styles.imgContaner}
+              src={info.img}
+              alt="chef journey"
+              style={{
+
+              }}
+            />
+          </span>
         </div>
       </div>
-    </>)
+    </>
+  )
 }
 
 export default ChefSection

@@ -1,4 +1,5 @@
 import  { useState } from 'react'
+import style from './Sesional.module.css'
 
 function Sesional() {
 
@@ -162,18 +163,17 @@ function Sesional() {
 
 
   return (
-    <div style={{ alignItems: "center", justifyItems: "center" }}>
+ <div className={style.container}>
 
+      <h1 className={style.heading}>Seasonal Calendar</h1>
+       <p className={style.subheading}>Discover our special menus and culinary events throughout the year</p>
 
-      <h1 style={{ fontSize: "49px", margin: "10px" }} >Seasonal Calendar</h1>
-      <p style={{ fontSize: "24px", marginBottom: "40px", color: "rgb(97, 89, 86)" }}   >Discover our special menus and culinary events throughout the year</p>
-
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+      <div className={style.monthsContainer}>
       {months.map((month, index) => (
 
         <button key={month} onClick={() => handleClick(index)}
           style={{
-            fontSize: "17px", margin: "12px", padding: "4px",
+             margin: "12px",
             color: selectedMonth === index ? 'white' : 'rgb(97, 89, 86)',
             backgroundColor: selectedMonth === index ? 'rgb(248, 79, 17)' : 'transparent',
           }}
@@ -186,20 +186,28 @@ function Sesional() {
 
       <h1 style={{ color: 'rgb(248, 79, 17)' }}>{months[selectedMonth]}  Events</h1>
       <p>Special dining experiences and culinary celebrations</p>
-
-      {
-        (seasonalEvents[selectedMonth] || []).map((event, index) => (
-          <div key={index} style={{ alignContent: "center", margin: "20px", fontSize: "20px", border: "solid black 2px", padding: "20px", minWidth: "500px" }}>
-            <span key={index}><span>{event.date.for}</span> <h3>{event.title}</h3><p>{event.description}</p> <h6>{event.price}</h6>  <button style={{ padding: "6px 10px", margin: "15px 10px", fontSize: "20px", backgroundColor: 'rgb(248, 79, 17)', color: "white" }} onClick={() => alert(`your tabel for the specfic ${event.title} event has been booked we will send you an recipt on your email`)}>Reserve</button></span></div>
-        ))}
+      {(seasonalEvents[selectedMonth] || []).map((event, index) => (
+        <div key={index} className={style.eventCard}>
+          <h3>{event.title}</h3>
+          <p>{event.description}</p>
+          <h6>{event.price}</h6>
+          <button
+            className={style.reserveButton}
+            onClick={() =>
+              alert(`Your table for the "${event.title}" event has been booked. We'll send a receipt to your email.`)
+            }
+          >
+            Reserve
+          </button>
+        </div>
+      ))}
    
-
-      <div style={{display: "flex", flexWrap: "wrap" ,flexDirection: "column", justifyContent: "center"}}>
-      <p>Want to be notified about upcoming events and special menus?</p>
-      <button style={{ padding: "6px 10px", margin: "15px 10px", fontSize: "20px", backgroundColor: 'rgb(248, 79, 17)', color: "white" }}>Subscribe to Updates  </button>
+      <div className={style.subscribeContainer}>
+        <p>Want to be notified about upcoming events and special menus?</p>
+        <button className={style.subscribeButton}>Subscribe to Updates</button>
+      </div>
     </div>
-</div>
   )
 }
 
-export default Sesional
+export default Sesional 

@@ -78,7 +78,7 @@ const recipes = [
 const RecipeList = () => {
   return (
     <div className={style.recipeList}>
-      <h1>Delicious Recipes</h1>
+      <h1>Food Gallery</h1>
       <div className={style.recipes}>
         {recipes.map((recipe) => (
           <div className={style.recipeItem} key={recipe.id}>

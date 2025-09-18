@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import "./aboutUS.css"
+import styles from './Evluotion.module.css'
 import { CiStar, CiLollipop, CiPaperplane } from 'react-icons/ci';
 import restrunt from '../siteComp/img/restrunt.jpg';
-
+import { useState } from 'react';
 
 function Evluotion() {
   let Eve2022 = {
@@ -15,7 +14,7 @@ function Evluotion() {
     task4: "Virtual cooking classes introduced"
   }
   let Eve2023 = {
-    heading: "The Art of Preparation",
+    heading: "The Art of Preparation", 
     info: "Excellence begins hours before the first guest arrives. Our daily preparation is a meticulous process that ensures every ingredient is perfectly prepared, every sauce is properly seasoned, and every component is ready for the evening's service. This behind-the-scenes work is where the foundation of great dining experiences is built. Every knife cut, every seasoning adjustment, and every quality check contributes to the final masterpiece that reaches your table.",
     subhead: "Key Highlights",
     task1: "Hand-selected ingredients from local suppliers",
@@ -35,23 +34,20 @@ function Evluotion() {
     task4: "FRegional culinary destination status",
   }
 
-
   let [info, setInfo] = useState(Eve2022)
   let [Data, setData] = useState('Eve2022')
 
-
   return (
     <>
-      <div className='container'>
-        <h1 className='mainHeading'>Restaurant Evolution</h1>
-        <p className='subHead'>From humble beginnings to culinary destination, discover how Menuuu has grown while staying true to our core values and commitment to exceptional dining experiences.</p>
-
+      <div className={styles.container}>
+        <h1 className={styles.mainHeading}>Restaurant Evolution</h1>
+        <p className={styles.subHead} style={{width:"60%"}}>
+          From humble beginnings to culinary destination, discover how Menuuu has grown while staying true to our core values and commitment to exceptional dining experiences.
+        </p>
+<div className={styles.btnDiv}>
         <button
-          className='btnAll'
-          onClick={() => {
-            setInfo(Eve2022);
-            setData('Eve2022');
-          }}
+          className={styles.btnAll}
+          onClick={() => { setInfo(Eve2022); setData('Eve2022'); }}
           style={{
             backgroundColor: Data === 'Eve2022' ? 'rgb(248, 79, 17)' : 'white',
             color: Data === 'Eve2022' ? 'white' : 'black'
@@ -61,82 +57,48 @@ function Evluotion() {
         </button>
 
         <button
-          className='btnAll'
-          onClick={() => {
-            setInfo(Eve2023);
-            setData('Eve2023');
-          }}
+          className={styles.btnAll}
+          onClick={() => { setInfo(Eve2023); setData('Eve2023'); }}
           style={{
             backgroundColor: Data === 'Eve2023' ? 'rgb(248, 79, 17)' : 'white',
             color: Data === 'Eve2023' ? 'white' : 'black'
           }}
         >
-          Daily Prop</button>
+          Daily Prop
+        </button>
 
         <button
-          className='btnAll'
-          onClick={() => {
-            setInfo(Eve2024);
-            setData('Eve2024');
-          }}
+          className={styles.btnAll}
+          onClick={() => { setInfo(Eve2024); setData('Eve2024'); }}
           style={{
             backgroundColor: Data === 'Eve2024' ? 'rgb(248, 79, 17)' : 'white',
             color: Data === 'Eve2024' ? 'white' : 'black'
           }}
         >
-          service
+          Service
         </button>
-        <div style={{ display: "flex", justifyContent: "space-evenly", margin: "80px 5px", padding: "20px", borderRadius: "8px", fontSize: "23px" }}>
-          <span style={{ marginRight: "20px", padding: "20px" }}>
-            <h2>
-              <CiStar style={{ position: "relative", top: "2px", color: "rgb(248, 79, 17)" }} />{" "}
-              {info.heading}
+</div>
+        <div className={styles.evolution}>
+          <div className={styles.infoContainer}>
+                 <h2>
+              <CiStar style={{ color: "rgb(248, 79, 17)" }} /> {info.heading}
             </h2>
-            <p><CiLollipop /> {info.info}
-            </p>
-            <ul style={{ listStyle: "none", marginTop: "60px" }}>
-              <h4 style={{ paddingBottom: "20px" }}>{info.subhead}
-              </h4>
-              {info.task1 && (
-                <li>
-                  <CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} />
-                  {info.task1}
+            <p ><CiLollipop /> {info.info}</p>
+          
+            <ul  style={{ listStyle: "none" ,paddingTop:"30px"}}>
+              <h4>{info.subhead}</h4>
+              {Object.keys(info).filter(key => key.startsWith("task")).map((task, i) => (
+                <li key={i}>
+                  <CiPaperplane style={{ color: "rgb(248, 79, 17)" }} />
+                  {info[task]}
                 </li>
-              )}
-              {info.task2 && (
-                <li>
-                  <CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} />
-                  {info.task2}
-                </li>
-              )}
-              {info.task3 && (
-                <li>
-                  <CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} />
-                  {info.task3}
-                </li>
-              )}
-              {info.task4 && (
-                <li>
-                  <CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} />
-                  {info.task4}
-                </li>
-              )}
-              {info.task5 && (
-                <li>
-                  <CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} />
-                  {info.task5}
-                </li>
-              )}
-              {info.task6 && (
-                <li>
-                  <CiPaperplane style={{ color: "rgb(248, 79, 17)", fontSize: "35px", marginRight: "20px", position: "relative", top: "10px" }} />
-                  {info.task6}
-                </li>
-              )}
+              ))}
             </ul>
-          </span>
-          <span>
-            <img src={restrunt} alt="don't" style={{ width: "400px", height: "380px", margin: "10px", borderRadius: "80px", boxShadow: "2px  2px 20px 20px rgb(176, 175, 174) " }} /></span>
+         </div>
+         <span >
+
+            <img className={styles.imgContainer}  src={restrunt} alt="restaurant" />
+       </span>
         </div>
       </div>
     </>

@@ -10,7 +10,8 @@ function About_us() {
     <>
  <div className={style.background}>
   <h1 className={style.head}>Our Culinary Story</h1>
-    <p  className={style.para}>Where passion meets artistry, and every dish tells a tale of dedication, innovation, and the pursuit of culinary excellence.</p>
+    <p  className={style.para}>Where passion meets artistry, and every dish tells a tale of dedication,
+      <br /> innovation, and the pursuit of culinary excellence.</p>
     <button className={style.btn}>Begin the Joureny</button>
     </div>
 

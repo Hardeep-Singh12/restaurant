@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chefInfo {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  font-family: initial;
+  margin: 10px;
+}
+
+.chefName {
+  font-family: initial;
+  font-size: 34px;
+}
+
+.chefTitle {
+  font-size: 18px;
+  color: rgb(143, 136, 136);
+}
+
+.chefExperience {
+  color: rgb(196, 156, 24);
+  font-size: 20px;
+    font-family: initial;
+
+}
+
+.currentInspirationTitle {
+  font-family: initial;
+
+  padding: 20px 0 10px 0;
+  font-size: 26px;
+}
+
+.currentInspirationDesc {
+  font-size: 18px;
+}
+
+.techniqueSpotlight {
+  background-color: white;
+  font-family: sans-serif;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+}
+
+.ingredientsSection {
+  margin: 12px;
+}
+
+.ingredientCard {
+  display: flex;
+  border: 2px solid black;
+  margin: 5px;
+  font-size: 20px;
+  padding: 5px;
+  align-items: center;
+}
+
+.ingredientImage {
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border-radius: 80px;
+  object-fit: cover;
+}
+
+.viewMenu {
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid black;
+  background-color: rgb(44, 26, 16);
+  color: white;
+  margin-top: 20px;
+}
+
+.viewMenu h4 {
+  font-size: 22px;
+  margin: 2px 0;
+}
+
+.viewMenu p {
+  margin: 20px 0;
+}
+
+.viewMenuLink {
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 12px;
+  background-color: rgb(249, 100, 46);
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chefInfo {
+    width: 90%;
+  }
+  .ingredientCard {
+    flex-direction: row ;
+    font-size: 14px;
+    align-items: center;
+  }
+
+  
+}
+@media (max-width: 429px) {
+    .ingredientCard {
+      flex-direction: row ;
+      font-size: 12px;
+      align-items: center;
+    }
+    .ingredientImage {
+      width: 80px;
+      height: 80px;
+      margin: 5px;
+      border-radius: 60px;
+      object-fit: cover;
+    }
+    .viewMenu {
+      font-size: 20px;
+      padding: 15px;
+      margin-top: 15px;
+    }
+    .chefName{
+      font-size: 28px;
+    }
+    .chefExperience{
+      font-size: 18px;
+      font-family: initial;
+    }
+    .currentInspirationTitle{
+      font-size: 22px;
+    }
+    .currentInspirationDesc{
+      font-size: 16px;
+      font-family: initial;
+    }
+  }
