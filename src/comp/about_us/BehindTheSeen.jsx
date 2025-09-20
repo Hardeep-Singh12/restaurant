@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
 import styles from "./BehaindTheSeen.module.css"
 import { CiStar, CiLollipop, CiPaperplane } from 'react-icons/ci'
 import food1 from '../siteComp/img/food1.jpg'
-import restrunt from '../siteComp/img/restrunt.jpg'
+import { useState } from "react"
 
 function BehindTheSeen() {
   let kitchenLife = {
@@ -42,7 +41,7 @@ function BehindTheSeen() {
   }
 
   let [info, setInfo] = useState(kitchenLife)
-  let [Data, setData] = useState('kitchenLife')
+  let [Data, setData] = useState ('kitchenLife')
 
   return (
     <div className={styles.container}>

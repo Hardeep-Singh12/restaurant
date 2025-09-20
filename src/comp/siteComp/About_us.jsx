@@ -1,4 +1,3 @@
-import React from 'react'
 import ChefSection from"../about_us/ChefSection"
 import style from "./About_us.module.css"
 import BehindTheSeen from "../about_us/BehindTheSeen"

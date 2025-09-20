@@ -40,9 +40,9 @@ function ChefSection() {
   return (
     <>
       <div className={styles.container}>
-        <h1 className={styles.mainHeading}>The Chef's Journey</h1>
+        <h1 className={styles.mainHeading}>The chef Journey</h1>
         <p className={styles.subHead}>
-          From classical training to innovative cuisine, discover the path that led to Menuuu's unique culinary philosophy.
+          From classical training to innovative cuisine, discover the path that led to Menuuu s unique culinary philosophy.
         </p>
         <div className="styles.btnDiv">
         <button
